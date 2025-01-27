@@ -1,0 +1,39 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root.theme-light {
+  --main-page-color: #FFF1F7;
+  --lamp-color: #353430;
+  --buttons-color: #353430;
+  --buttons-opacity-color: rgba(53, 52, 48, 0.5);
+  --h1-title-color: #FFC2E6;
+  --h1-text-shadow-color: #FF8DCB;
+  --h1-subtitle-color: #353430;
+  --h1-subtitle-back-color: #FF8DCB;
+  --h2-title-color: #353430;
+  --h4-title-color: #353430;
+  --h4-back-color: #FF8DCB;
+  --main-text-color: #353430;
+  --link-text-color: #353430;
+  --link-text-shadow-color: #FF8DCB; 
+  --h3-title-color: #353430;
+  --h3-back-color: #FF8DCB;
+  --link-size: 18px;
+  --text-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+}
+
+.theme-light .page {
+  background-image: url(/images/cover-image-light.png);
+}
+
+.theme-light .lamp {
+  opacity: 0;
+}
+
+.theme-light .lamp::after {
+  opacity: 0;
+}
+
