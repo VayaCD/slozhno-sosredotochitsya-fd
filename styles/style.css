@@ -100,7 +100,7 @@ ul li {
   padding: 1.5px 13px;
   text-decoration: none;
   border: 1px solid transparent;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .header__theme-menu-button:hover {
@@ -200,6 +200,7 @@ ul li {
   color: var(--h4-title-color);
   background-color: var(--h4-back-color);
   word-spacing: 6px;
+  margin-bottom: 10px;
 }
 
 .text-link {
