@@ -192,6 +192,11 @@ ul li {
   color: var(--h3-title-color);
   background-color: var(--h3-back-color);
 }
+
+.main .h3-title:last-child {
+  margin-bottom: 10px;
+}
+
 .h4-title {
   font-family: 'IBM Plex mono';
   font-weight: 400;
@@ -346,6 +351,10 @@ ul li {
     max-width: 236px;
   }
 
+  .main .h3-title:last-child {
+    margin-bottom: 20px;
+  }
+
   .big-main-container {
     margin-bottom: 80px;
   }
@@ -440,7 +449,7 @@ ul li {
   }
 
   .header__theme-menu-button {
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
   }
 
   .header__theme-menu-item {
@@ -455,6 +464,10 @@ ul li {
     font-size: var(--text-size-desktop-tablet);
     margin-bottom: 114px;
     line-height: 130px;
+  }
+
+  .main .h3-title:last-child {
+    margin-bottom: 20px;
   }
 
   .h4-title {
