@@ -123,7 +123,7 @@ ul li {
   font-family: 'IBM Plex mono';
   font-weight: 700;
   font-size: var(--text-size-mobile);
-  line-height: 96px;
+  line-height: 95.7px;
   color: var(--h1-title-color);
   text-shadow: 4px 4px 0px var(--h1-text-shadow-color);
   margin-bottom: 55px;
@@ -221,11 +221,13 @@ ul li {
   border: 1px solid var(--link-text-color);
 } 
 
+.image-section {
+  padding-bottom: 40px;
+}
 .image-container {
   display: grid;
   grid-template-columns: 1fr; 
   gap: 10px;
-  padding-bottom: 40px;
 }
 
 .images {
@@ -298,6 +300,7 @@ ul li {
   .h1-title {
     margin-bottom: 162px;
     font-size: var(--text-size-desktop-tablet);
+    line-height: 99px;
   }
 
   .subtitle__container {
@@ -308,10 +311,12 @@ ul li {
   .main {
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 60px;
   }
   .section {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 80px;
   }
 
   .title-container {
@@ -326,6 +331,13 @@ ul li {
     max-width: 236px;
   }
 
+  .big-main-container {
+    margin-bottom: 80px;
+  }
+
+  .image-section {
+    padding-bottom: 60px;
+  }
   .images {
     inline-size: 100%;
     max-inline-size: 100%;
@@ -344,6 +356,7 @@ ul li {
     "image-tape image-book image-ice-cream"
     "image-tape image-street image-street"
     "image-tape image-street image-street";
+    max-height: 823px;
   } 
 
 .image-sunset { 
@@ -396,6 +409,21 @@ ul li {
   .h1-title {
     font-size: var(--text-size-desktop-tablet);
     margin-bottom: 114px;
+    line-height: 130px;
+  }
+
+  .title-container {
+    max-width: 314px;
+  }
+
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+  }
+
+  .main-text-container {
+    max-width: 649px;
   }
 
   .subtitle__container {
@@ -405,6 +433,20 @@ ul li {
 
   .subtitle {
     max-width: 491px;
+  }
+
+  .h2-title-modifier {
+    max-width: 314px;
+  }
+
+  .big-main-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .main-text-container-second {
+    max-width: 315px;
+    padding-bottom: 80px;
   }
 
   .images {
