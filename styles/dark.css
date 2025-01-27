@@ -25,6 +25,16 @@
   --text-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
+.theme-dark .page {
+  background-image: url(/images/cover-image-dark.png);
+}
 
+.theme-dark .lamp {
+  opacity: 0;
+}
+
+.theme-dark .lamp::after {
+  opacity: 0;
+}
 
 
