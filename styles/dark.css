@@ -29,12 +29,4 @@
   background-image: url(/images/cover-image-dark.png);
 }
 
-.theme-dark .lamp {
-  opacity: 0;
-}
-
-.theme-dark .lamp::after {
-  opacity: 0;
-}
-
 
