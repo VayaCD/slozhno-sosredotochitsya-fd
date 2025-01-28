@@ -15,6 +15,7 @@
   flex-direction: column;
   position: relative;
   height: 100vh;
+  min-height: 668px;
 }
 
 .decorated-zone {
@@ -31,7 +32,7 @@
   margin-bottom: 39px;
 }
 .lamp {
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', sans-serif;
   color: var(--lamp-color);
   font-weight: 400;
   font-size: 18px;
@@ -40,7 +41,7 @@
   margin-top: 10px;
   width: 52px;
   margin-left: auto;
-  margin-right: 10px;
+  margin-right: 19px;
 }
 
 .lamp::after {
@@ -56,7 +57,7 @@
   margin-left: 10px;
 }
 
-.lamp__container::after {
+.footer::after, .lamp__container::after {
   content: "";
   position: absolute;
   width: 25px;
@@ -65,10 +66,10 @@
   border-top: 1px solid var(--lamp-color);
   top: 10px;
   left: 100%;
-  transform: translateX(-25px);
+  transform: translateX(-35px);
 }
 
-.header::before {
+.footer::before, .header::before {
   content: "";
   position: absolute;
   width: 25px;
@@ -116,13 +117,13 @@ ul li {
   pointer-events: none
 }
 /* NO FOCUS */
-.h1-title {
-  font-family: 'IBM Plex mono';
+.header-title {
+  font-family: 'IBM Plex mono', sans-serif;
   font-weight: 700;
   font-size: var(--text-size-mobile);
   line-height: 95.7px;
-  color: var(--h1-title-color);
-  text-shadow: 4px 4px 0px var(--h1-text-shadow-color);
+  color: var(--brand-title-color);
+  text-shadow: 4px 4px 0px var(--brand-text-shadow-color);
   margin-bottom: 55px;
 }
 
@@ -131,12 +132,12 @@ ul li {
 }
 /* HEADER TEXT */
 .subtitle {
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--h1-subtitle-color);
-  background-color: var(--h1-subtitle-back-color);
+  color: var(--brand-subtitle-color);
+  background-color: var(--brand-subtitle-back-color);
   max-width: 355px;
 }
 /* BEGINING MAIN */
@@ -151,18 +152,18 @@ ul li {
 }
 
 .main-subtitle {
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: var(--h4-title-color);
-  background-color: var(--h4-back-color);
+  color: var(--main-subtitle-color);
+  background-color: var(--main-subtitle-back-color);
   word-spacing: 6px;
   margin-bottom: 10px;
 }
 
 .main-text {
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
@@ -173,43 +174,43 @@ ul li {
 .big-main-container {
   margin-bottom: 50px;
 }
-.h2-title {
-  font-family: 'IBM Plex mono';
+.section-title {
+  font-family: 'IBM Plex mono', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--h2-title-color);
+  color: var(--main-title-color);
   max-width: 355px;
   margin-bottom: 20px;
 }
 
-.h3-title {
+.additional-title {
   margin-bottom: 20px;
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--h3-title-color);
-  background-color: var(--h3-back-color);
+  color: var(--main-subtitle-color);
+  background-color: var(--main-subtitle-back-color);
 }
 
-.main .h3-title:last-child {
+.main .additional-title:last-child {
   margin-bottom: 10px;
 }
 
-.h4-title {
-  font-family: 'IBM Plex mono';
+.section-subtitle {
+  font-family: 'IBM Plex mono', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--h4-title-color);
-  background-color: var(--h4-back-color);
+  color: var(--main-subtitle-color);
+  background-color: var(--main-subtitle-back-color);
   word-spacing: 6px;
   margin-bottom: 10px;
 }
 
 .text-link {
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', sans-serif;
   text-decoration: none;
   font-weight: 400;
   font-size: var(--link-size);
@@ -248,55 +249,33 @@ ul li {
   justify-content: center;
   text-align: center;
   height: 100vh;
+  min-height: 668px;
 }
 
 .footer-title {
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', sans-serif;
   font-weight: 700;
   font-size: var(--text-size-mobile);
   line-height: 96px;
-  color: var(--h1-title-color);
-  text-shadow: 2px 2px 0px var(--h1-text-shadow-color);
+  color: var(--brand-title-color);
+  text-shadow: 2px 2px 0px var(--brand-text-shadow-color);
   margin: 0;
   padding-top: 286px;
   padding-bottom: 285px;
 }
 
-.footer::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-right: 1px solid var(--lamp-color);
-  border-top: 1px solid var(--lamp-color);
-  top: 10px;
-  left: 100%;
-  transform: translateX(-35px);
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-left: 1px solid var(--lamp-color);
-  border-bottom: 1px solid var(--lamp-color);
-  top: 100%;
-  transform: translateY(-35px);
-}
-
 @media (min-width: 768px) {
   .lamp {
-    margin-right: 19px;
+    margin-right: 29px;
     margin-top: 20px;
   }
   
-  .lamp__container::after {
-    transform: translateX(-35px);
+  .footer::after, .lamp__container::after {
+    transform: translateX(-45px);
     top: 20px;
   }
 
-  .header::before {
+  .footer::before, .header::before {
     transform: translateY(-45px);
     left: 20px;
   }
@@ -308,13 +287,13 @@ ul li {
     margin-bottom: 160px;
     margin-right: 10px;
   }
-  .h1-title {
+  .header-title {
     margin-bottom: 162px;
     font-size: var(--text-size-desktop-tablet);
     line-height: 99px;
   }
 
-  .h4-title {
+  .section-subtitle {
     margin-bottom: 10px;
   }
 
@@ -347,11 +326,11 @@ ul li {
     max-width: 472px;
   }
 
-  .h2-title-modifier {
+  .section-title-modifier {
     max-width: 236px;
   }
 
-  .main .h3-title:last-child {
+  .main .additional-title:last-child {
     margin-bottom: 20px;
   }
 
@@ -403,32 +382,25 @@ ul li {
     grid-area: image-street;
   }
 
-  .footer::before {
-    transform: translateY(-45px);
-    left: 20px;
-  }
-
-  .footer::after {
-    top: 20px;
-    transform: translateX(-45px);
-  }
-
   .footer-title {
     font-size: var(--text-size-desktop-tablet);
   }
 }
 
 @media (min-width: 1024px) {
-  .header::before {
-    transform: translateY(-45px);
-    left: 20px;
-  }
+  
   .lamp {
-    margin-right: 19px;
+    margin-right: 29px;
   }
   
-  .lamp__container::after {
-    transform: translateX(-35px);
+  .footer::after, .lamp__container::after {
+    transform: translateX(-45px);
+    top: 20px;
+  }
+
+  .footer::before, .header::before {
+    transform: translateY(-45px);
+    left: 20px;
   }
 
   .lamp_menu__container {
@@ -460,17 +432,17 @@ ul li {
     margin-right: 0;
   }
 
-  .h1-title {
+  .header-title {
     font-size: var(--text-size-desktop-tablet);
     margin-bottom: 114px;
     line-height: 130px;
   }
 
-  .main .h3-title:last-child {
+  .main .additional-title:last-child {
     margin-bottom: 20px;
   }
 
-  .h4-title {
+  .section-subtitle {
     margin-bottom: 10px;
   }
 
@@ -492,7 +464,7 @@ ul li {
     margin-bottom: 0;
   }
 
-  .main-text-container-second {
+  .main-text-container-modifier {
     max-width: 315px;
   }
 
@@ -505,7 +477,7 @@ ul li {
     max-width: 491px;
   }
 
-  .h2-title-modifier {
+  .section-title-modifier {
     max-width: 314px;
   }
 
@@ -525,7 +497,6 @@ ul li {
 
 .image-container {
     display: grid;
-    max-height: 1048px;
     max-width: 984px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -557,16 +528,6 @@ ul li {
     grid-area: image-street;
   }
   
-  .footer::before {
-    transform: translateY(-45px);
-    left: 20px;
-  }
-
-  .footer::after {
-    top: 20px;
-    transform: translateX(-45px);
-  }
-
   .footer-title {
     font-size: var(--text-size-desktop-tablet);
   }
