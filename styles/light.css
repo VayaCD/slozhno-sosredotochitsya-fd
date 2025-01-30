@@ -43,11 +43,19 @@
     background-image: url(../images/cover-image-light.png);
   }
 
-  .lamp {
+  .theme-light .lamp {
     opacity: 0;
   }
   
-  .lamp::after {
+  .theme-light .lamp::after {
+    opacity: 0;
+  }
+
+  .theme-auto .lamp {
+    opacity: 0;
+  }
+
+  .theme-auto .lamp::after {
     opacity: 0;
   }
 }
