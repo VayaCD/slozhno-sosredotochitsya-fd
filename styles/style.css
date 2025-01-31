@@ -10,12 +10,12 @@
   background-attachment: fixed;
 }
 
+
 .header {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content 1fr;
   height: 100vh;
-  min-height: 668px;
+  position: relative;
 }
 
 .decorated-zone {
@@ -24,24 +24,20 @@
 }
 
 .lamp_menu__container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 }
-.lamp__container {
-  position: relative;
-  margin-bottom: 39px;
-}
+
 .lamp {
   font-family: 'IBM Plex mono', sans-serif;
   color: var(--lamp-color);
   font-weight: 400;
   font-size: 18px;
-  position: relative;
+  position: absolute;
   margin: 0;
-  margin-top: 10px;
   width: 52px;
-  margin-left: auto;
-  margin-right: 19px;
+  top: 10px;
+  left: 100%;
+  transform: translateX(-70px);
 }
 
 .lamp::after {
@@ -57,7 +53,7 @@
   margin-left: 10px;
 }
 
-.footer::after, .lamp__container::after {
+.footer::after, .header::after {
   content: "";
   position: absolute;
   width: 25px;
@@ -77,11 +73,20 @@
   border-left: 1px solid var(--lamp-color);
   border-bottom: 1px solid var(--lamp-color);
   top: 100%;
+  left: 10px;
   transform: translateY(-35px);
 }
-/* ДЕНЬ АВТО НЕОН */
+
+.header__theme-menu-item {
+  width: 72px;
+}
+
+.header__theme-menu {
+align-self: center;
+margin-top: 15px;
+}
+
 .header__theme-menu-list {
-  margin-bottom: 52px;
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -116,7 +121,7 @@ ul li {
   border: 1px solid var(--buttons-color);
   pointer-events: none
 }
-/* NO FOCUS */
+
 .header-title {
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: 700;
@@ -124,13 +129,15 @@ ul li {
   line-height: 95.7px;
   color: var(--brand-title-color);
   text-shadow: 4px 4px 0px var(--brand-text-shadow-color);
-  margin-bottom: 55px;
+  align-self: center;
 }
 
 .subtitle__container {
-  padding-bottom: 66px;
+  align-self: center;
+  justify-self: end;
+  transform: translateY(-7px);
 }
-/* HEADER TEXT */
+
 .subtitle {
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: 700;
@@ -140,7 +147,7 @@ ul li {
   background-color: var(--brand-subtitle-back-color);
   max-width: 355px;
 }
-/* BEGINING MAIN */
+
 .main {
   padding-left: 10px;
   padding-right: 10px;
@@ -270,11 +277,11 @@ ul li {
   }
 
   .lamp {
-    margin-right: 29px;
-    margin-top: 20px;
+    transform: translateX(-80px);
+    top: 20px;
   }
   
-  .footer::after, .lamp__container::after {
+  .footer::after, .header::after {
     transform: translateX(-45px);
     top: 20px;
   }
@@ -283,31 +290,26 @@ ul li {
     transform: translateY(-45px);
     left: 20px;
   }
-  .lamp__container {
-    margin-bottom: 146px;
+  
+  .header__theme-menu {
+    margin-top: 32px;
   }
 
   .header__theme-menu-list {
-    margin-bottom: 160px;
-    margin-right: 10px;
+    margin-right: 8px;
   }
   .header-title {
-    margin-bottom: 162px;
     font-size: var(--text-size-desktop-tablet);
     line-height: 99px;
   }
 
   .subtitle {
     max-width: 364px;
+    margin-right: 10px;
   }
 
   .section-subtitle {
     margin-bottom: 10px;
-  }
-
-  .subtitle__container {
-    margin-left: 384px;
-    padding-bottom: 183px;
   }
 
   .main {
@@ -397,22 +399,15 @@ ul li {
   .page {
     margin: auto;
   }
-
-  .lamp_menu__container {
-    display: flex;
-    flex-direction: row-reverse;
-  }
   
-  .header__theme-menu {
-    margin-right: 300px;
-    margin-top: 20px;
-  }
-
   .header__theme-menu-list {
-    display: flex;
     flex-direction: row;
-    margin-bottom: 262px;
-    margin-right: 0;
+    justify-content: center;
+    margin-left: 24px;
+  }
+  .header__theme-menu {
+    align-self: auto;
+    margin-top: 18px;
   }
 
   .header__theme-menu-button {
@@ -423,12 +418,7 @@ ul li {
     margin-right: 10px;
   }
 
-  .header__theme-menu-item:last-child {
-    margin-right: 0;
-  }
-
   .header-title {
-    margin-bottom: 114px;
     line-height: 130px;
   }
 
@@ -449,8 +439,8 @@ ul li {
   }
 
   .subtitle__container {
-    margin-left: 513px;
-    padding-bottom: 134px;
+    align-self: center;
+    transform: translateY(-11px);
   }
 
   .subtitle {
