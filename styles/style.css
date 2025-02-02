@@ -133,9 +133,8 @@ ul li {
 }
 
 .subtitle__container {
-  align-self: center;
   justify-self: end;
-  margin-top: -10px;
+  padding-top: 55px;
 }
 
 .subtitle {
@@ -278,14 +277,12 @@ ul li {
     top: 20px;
   }
 
-  .footer::after,
-  .header::after {
+  .decorated-zone::after {
     transform: translateX(-45px);
     top: 20px;
   }
 
-  .footer::before,
-  .header::before {
+  .decorated-zone::before {
     transform: translateY(-45px);
     left: 20px;
   }
@@ -305,6 +302,10 @@ ul li {
   .subtitle {
     max-width: 364px;
     margin-right: 10px;
+  }
+
+  .subtitle__container {
+    padding-top: 162px;
   }
 
   .section-subtitle {
@@ -411,10 +412,6 @@ ul li {
     margin-top: 18px;
   }
 
-  .header__theme-menu-button {
-    letter-spacing: 1.5px;
-  }
-
   .header__theme-menu-item {
     margin-right: 10px;
   }
@@ -440,8 +437,7 @@ ul li {
   }
 
   .subtitle__container {
-    align-self: center;
-    margin-top: -22px;
+    padding-top: 114px;
   }
 
   .subtitle {
