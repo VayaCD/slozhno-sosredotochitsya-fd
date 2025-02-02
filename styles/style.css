@@ -4,17 +4,17 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   margin: 0;
   background-color: var(--main-page-color);
-  background-image: url(/images/cover-image-dark.png);
+  background-image: url(../images/cover-image-dark.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-
 .header {
   display: grid;
   grid-template-rows: min-content 1fr min-content 1fr;
   height: 100vh;
+  min-height: 668px;
   position: relative;
 }
 
@@ -23,12 +23,36 @@
   padding-right: 10px;
 }
 
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--lamp-color);
+  border-bottom: 1px solid var(--lamp-color);
+  top: 100%;
+  left: 10px;
+  transform: translateY(-35px);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--lamp-color);
+  border-top: 1px solid var(--lamp-color);
+  top: 10px;
+  left: 100%;
+  transform: translateX(-35px);
+}
+
 .lamp_menu__container {
   display: grid;
 }
 
 .lamp {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   color: var(--lamp-color);
   font-weight: 400;
   font-size: 18px;
@@ -53,37 +77,13 @@
   margin-left: 10px;
 }
 
-.footer::after, .header::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-right: 1px solid var(--lamp-color);
-  border-top: 1px solid var(--lamp-color);
-  top: 10px;
-  left: 100%;
-  transform: translateX(-35px);
-}
-
-.footer::before, .header::before {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-left: 1px solid var(--lamp-color);
-  border-bottom: 1px solid var(--lamp-color);
-  top: 100%;
-  left: 10px;
-  transform: translateY(-35px);
-}
-
 .header__theme-menu-item {
   width: 72px;
 }
 
 .header__theme-menu {
-align-self: center;
-margin-top: 15px;
+  align-self: center;
+  margin-top: 15px;
 }
 
 .header__theme-menu-list {
@@ -119,11 +119,11 @@ ul li {
 
 .header__theme-menu-button_active {
   border: 1px solid var(--buttons-color);
-  pointer-events: none
+  pointer-events: none;
 }
 
 .header-title {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: var(--text-size-mobile);
   line-height: 95.7px;
@@ -135,11 +135,11 @@ ul li {
 .subtitle__container {
   align-self: center;
   justify-self: end;
-  transform: translateY(-7px);
+  margin-top: -10px;
 }
 
 .subtitle {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -159,7 +159,7 @@ ul li {
 }
 
 .main-subtitle {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
@@ -170,7 +170,7 @@ ul li {
 }
 
 .main-text {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
@@ -182,7 +182,7 @@ ul li {
   margin-bottom: 50px;
 }
 .section-title {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -193,7 +193,7 @@ ul li {
 
 .additional-title {
   margin-bottom: 20px;
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -206,18 +206,17 @@ ul li {
 }
 
 .section-subtitle {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
   color: var(--main-subtitle-color);
   background-color: var(--main-subtitle-back-color);
-  word-spacing: 6px;
   margin-bottom: 10px;
 }
 
 .text-link {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   text-decoration: none;
   font-weight: 400;
   font-size: var(--link-size);
@@ -232,7 +231,7 @@ ul li {
 
 .text-link:focus-visible {
   border: 1px solid var(--link-text-color);
-} 
+}
 
 .image-section {
   padding-bottom: 40px;
@@ -251,8 +250,6 @@ ul li {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-left: 10px;
-  padding-right: 10px;
   justify-content: center;
   text-align: center;
   height: 100vh;
@@ -260,7 +257,7 @@ ul li {
 }
 
 .footer-title {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: var(--text-size-mobile);
   line-height: 96px;
@@ -280,17 +277,19 @@ ul li {
     transform: translateX(-80px);
     top: 20px;
   }
-  
-  .footer::after, .header::after {
+
+  .footer::after,
+  .header::after {
     transform: translateX(-45px);
     top: 20px;
   }
 
-  .footer::before, .header::before {
+  .footer::before,
+  .header::before {
     transform: translateY(-45px);
     left: 20px;
   }
-  
+
   .header__theme-menu {
     margin-top: 32px;
   }
@@ -346,6 +345,7 @@ ul li {
 
   .big-main-container {
     margin-bottom: 80px;
+    justify-content: center;
   }
 
   .image-section {
@@ -361,16 +361,17 @@ ul li {
 
   .image-container {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(3, minmax(230px, 315px));
     gap: 20px;
     grid-template-areas:
-    "image-sunset image-sunset image-ice-cream"
-    "image-tape image-book image-ice-cream"
-    "image-tape image-street image-street"
-    "image-tape image-street image-street";
-  } 
+      "image-sunset image-sunset image-ice-cream"
+      "image-tape image-book image-ice-cream"
+      "image-tape image-street image-street"
+      "image-tape image-street image-street";
+  }
 
-.image-sunset {
+  .image-sunset {
     grid-area: image-sunset;
   }
 
@@ -399,7 +400,7 @@ ul li {
   .page {
     margin: auto;
   }
-  
+
   .header__theme-menu-list {
     flex-direction: row;
     justify-content: center;
@@ -435,12 +436,12 @@ ul li {
   }
 
   .main-text-container-modifier {
-    max-width: 315px;
+    max-width: 314px;
   }
 
   .subtitle__container {
     align-self: center;
-    transform: translateY(-11px);
+    margin-top: -22px;
   }
 
   .subtitle {
@@ -457,5 +458,4 @@ ul li {
     margin-bottom: 60px;
     flex-wrap: wrap;
   }
-  
 }
